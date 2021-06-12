@@ -7,6 +7,7 @@ describe Entities::Order do
     it { is_expected.to have_attr_accessor(:quantity) }
     it { is_expected.to have_attr_accessor(:product) }
     it { is_expected.to have_attr_accessor(:tax) }
+    it { is_expected.to have_attr_accessor(:total_price) }
   end
 
   it 'default attributes' do

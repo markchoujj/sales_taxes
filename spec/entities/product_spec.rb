@@ -20,4 +20,8 @@ describe Entities::Product do
     expect(chocolate.is_import).to eq false
     expect(imported_chocolate.is_import).to eq true
   end
+
+  it 'default attributes' do
+    expect(chocolate.tax).to eq 0
+  end
 end

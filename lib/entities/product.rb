@@ -1,6 +1,5 @@
 require 'BigDecimal'
 require './lib/helpers/entities_helper'
-require 'byebug'
 
 module Entities
   class Product

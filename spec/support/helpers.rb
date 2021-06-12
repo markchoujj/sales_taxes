@@ -1,4 +1,5 @@
 Dir['./lib/entities/*.rb'].sort.each { |file| require file }
+Dir['./lib/services/*.rb'].sort.each { |file| require file }
 require_relative '../custom/matchers/should_have_attr_accessor'
 
 module Helpers
