@@ -8,7 +8,7 @@ module Entities
     attr_accessor :name, :price, :category, :tax, :is_import
 
     def initialize(name, price)
-      @name = name
+      @name = name.strip
       @price = to_decimal(price)
       @tax = 0
       initialize_category
