@@ -1,5 +1,4 @@
-Dir['./lib/entities/*.rb'].sort.each { |file| require file }
-Dir['./lib/services/*.rb'].sort.each { |file| require file }
+Dir['./lib/**/*.rb'].sort.each { |file| require file }
 require_relative '../custom/matchers/should_have_attr_accessor'
 
 module Helpers
@@ -21,5 +20,10 @@ module Helpers
 
   def build_deal
     subject(:deal) { Entities::Deal.new }
+  end
+
+  def build_decorated_deal
+    build_deal
+    subject(:decorated_deal) { Decorators::DealDecorator.new(deal) }
   end
 end

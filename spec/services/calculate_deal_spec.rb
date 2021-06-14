@@ -15,7 +15,6 @@ describe Services::CalculateDeal do
   end
 
   it 'calculates total tax' do
-
     # Totol tax = 1.23 + 2.33 = 3.56, round to 3.6
     expect(deal.total_tax).to eq 3.6
   end
