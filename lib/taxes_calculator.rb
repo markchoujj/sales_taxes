@@ -12,7 +12,12 @@ class TaxesCalculator
         input = gets.chomp
         break if input == ''
 
-        @qty, @name, @price = input.split(',')
+        if input.split(',').length == 3
+          @qty, @name, @price = input.split(',')
+        else
+          puts 'Please input correct value!'
+          return
+        end
         analyse_product
         analyse_order
       end
